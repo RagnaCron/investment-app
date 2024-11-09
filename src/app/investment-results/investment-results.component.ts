@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {InvestmentReturnData} from "./investment-results";
 
 @Component({
   selector: 'app-investment-results',
@@ -8,5 +9,9 @@ import { Component } from '@angular/core';
   styleUrl: './investment-results.component.css'
 })
 export class InvestmentResultsComponent {
+  @Input() results!: InvestmentReturnData[];
 
+  onCalculate() {
+    console.log(this.results);
+  }
 }
