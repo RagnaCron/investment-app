@@ -10,8 +10,4 @@ import {InvestmentReturnData} from "./investment-results";
 })
 export class InvestmentResultsComponent {
   @Input() results!: InvestmentReturnData[];
-
-  onCalculate() {
-    console.log(this.results);
-  }
 }
